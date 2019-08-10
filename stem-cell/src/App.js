@@ -1,6 +1,8 @@
 import React from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { addData } from './actions';
+
 
 function myFunction() {
   console.log("Helo")
@@ -33,6 +35,7 @@ class NameForm extends React.Component {
   handleSubmit(event) {
     alert('Your results have been submitted!: ' + this.state.value1 + " " + this.state.value2 + " " + this.state.value3);
     event.preventDefault();
+    addData(this.state)
   }
 
   render() {

@@ -1,6 +1,13 @@
 import {databaseRef} from '../firebase'
 
-export const addData = newData => async dispatch => {
-  databaseRef.push().set(newData);
+export function addData(newData) {
+  databaseRef.push().set(newData,
+    function(error) {
+        if (error) {
+            console.log(error)
+        } else {
+            console.log("Submit Okay")
+        }
+    });
 };
 
