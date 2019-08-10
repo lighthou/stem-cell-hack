@@ -15,3 +15,8 @@ code {
 .padded {
   padding: 20px
 }
+
+input[type=number]{
+  width: 193px;
+  height: 29px;
+} 
