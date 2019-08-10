@@ -6,19 +6,15 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      <form><label class="inputlabel">Name:  <input type="text" name="name" /></label><input type="submit" value="Submit" /></form>
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <div class="padded" align="right"> 
+      <form id="submitform">
+      <label class="inputlabel">Urine Result:  <input type="text" name="name" /></label><br></br>
+      <label class="inputlabel">Blood Calcium levels:  <input type="text" name="name" /></label><br></br>
+      <label class="inputlabel">Calcium Absorption:  <input type="text" name="name" /></label><br></br>
+      <input type="submit" name="submit" align="center"/>
+      </form>
+      </div>
+      
       </header>
     </div>
   );
