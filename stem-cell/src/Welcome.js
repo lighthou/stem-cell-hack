@@ -4,6 +4,8 @@ import doctor from './doctor.jpg';
 import caillou from './caillou.jpg'
 import NameForm from './App.js'
 import ReactDOM from 'react-dom';
+import DoctorForm from './doctorform'
+import { populateData } from './actions';
 
 class Welcome extends React.Component {
     constructor(props) {
@@ -15,6 +17,7 @@ class Welcome extends React.Component {
       this.handleChangeValue3 = this.handleChangeValue3.bind(this);
   
       this.handleSubmit = this.handleSubmit.bind(this);
+      this.data = populateData();
     }
   
     handleChangeValue1(event) {
@@ -39,7 +42,7 @@ class Welcome extends React.Component {
         <div className="App">
           <header className="App-header">
             <p>Are you a doctor or a patient?</p>
-            <input className='padded' type="image" src={doctor} height='300' width='500'/>
+            <input className='padded' type="image" src={doctor} height='300' width='500' onClick={() => {ReactDOM.render(<DoctorForm data={this.data}/>, document.getElementById('root'));}}/>
             <input type="image" src={caillou} height='300' width='500' onClick={() => {ReactDOM.render(<NameForm />, document.getElementById('root'));}}/>
           
           </header>
