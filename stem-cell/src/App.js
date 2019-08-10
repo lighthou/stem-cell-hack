@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import { addData } from './actions';
+
 
 class NameForm extends React.Component {
   constructor(props) {
@@ -28,6 +30,7 @@ class NameForm extends React.Component {
   handleSubmit(event) {
     alert('Your results have been submitted!: ' + this.state.value1 + " " + this.state.value2 + " " + this.state.value3);
     event.preventDefault();
+    addData(this.state)
   }
 
   render() {

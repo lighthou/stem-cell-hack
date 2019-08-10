@@ -6,4 +6,6 @@ const fbConfig = config.firebase
 
 firebase.initializeApp(fbConfig);
 
-export const databaseRef = firebase.database().ref();
+const database = firebase.database().ref();
+
+export const databaseRef = database
