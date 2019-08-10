@@ -1,0 +1,10 @@
+{
+    "firebase": {
+        "apiKey": "enter-here",
+        "authDomain": "enter-here",
+        "databaseURL": "enter-here",
+        "projectId": "enter-here",
+        "storageBucket": "enter-here",
+        "messagingSenderId": "enter-here"
+    }
+}
