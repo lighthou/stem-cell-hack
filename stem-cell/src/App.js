@@ -1,10 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-
-function myFunction() {
-  console.log("Helo")
-}
 
 class NameForm extends React.Component {
   constructor(props) {
@@ -41,9 +36,9 @@ class NameForm extends React.Component {
         <header className="App-header">
         <div className="padded" align="right"> 
         <form id="submitform" onSubmit={this.handleSubmit}>
-        <label className="inputlabel">Weight:  <input type="text" name="name" value={this.state.value1} onChange={this.handleChangeValue1}/></label><br></br>
-        <label className="inputlabel">Diet:  <input type="text" name="name" value={this.state.value2} onChange={this.handleChangeValue2}/></label><br></br>
-        <label className="inputlabel">Age:  <input type="text" name="name" value={this.state.value3} onChange={this.handleChangeValue3}/></label><br></br>
+        <label className="inputlabel">Weight:  <input required type="number" name="name" value={this.state.value1} onChange={this.handleChangeValue1}/></label><br></br>
+        <label className="inputlabel">Daily Calcium:  <input required type="number" name="name" value={this.state.value2} onChange={this.handleChangeValue2}/></label><br></br>
+        <label className="inputlabel">Age:  <input required type="number" name="name" value={this.state.value3} onChange={this.handleChangeValue3}/></label><br></br>
         <input type="submit" name="submit" value="Submit Stem Cell Details" align="center"/>
         </form>
         </div>
