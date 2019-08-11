@@ -56,10 +56,10 @@ class NameForm extends React.Component {
         <label className="inputlabel">Weight (in Kg):  <input required type="number" min="20" max="150" name="name" value={this.state.weight} onChange={this.handleChangeWeight}/></label><br></br>
         <label className="inputlabel">Daily Calcium (in Mg):  <input required type="number" name="name" min="0" max="2000" value={this.state.calcium} onChange={this.handleChangeCalcium}/></label><br></br>
         <label className="inputlabel">Age (in Years):  <input required type="number" name="name" min="1" max="110" value={this.state.age} onChange={this.handleChangeAge}/></label><br></br>
-        <input type="submit" name="submit" value="Submit Stem Cell Details" align="center"/>
+        <input className="myButton" type="submit" name="submit" value="Submit Stem Cell Details" align="center"/>
         </form>
         </div>
-        <p><b>You will receive a text about any dietary modifications that should be made based on calcium intake.</b></p>
+        <p className="patientInfo"><b>You will receive a text about any dietary modifications that should be made based on calcium intake.</b></p>
 
         </header>
       </div>
