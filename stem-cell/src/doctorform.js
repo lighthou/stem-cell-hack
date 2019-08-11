@@ -38,7 +38,7 @@ function sendTextWithData(name, number, uce, bscl, calcium, age, weight) {
         message += "Finally, your Blood Serum Calcium Levels are out of sorts and you should see your doctor on further steps."
     }
 
-    message += "If you have any further questions, please dont hesistake to contace chees.life clinical trials."
+    message += "If you have any further questions, please dont hesitate to contact chees.life clinical trials."
     sendText(message, number)
 
 }
