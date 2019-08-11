@@ -39,7 +39,7 @@ function sendTextWithData(name, number, uce, bscl, calcium, age, weight) {
     }
 
     message += "If you have any further questions, please dont hesistake to contace chees.life clinical trials."
-    //sendText(message, number)
+    sendText(message, number)
 
 }
 
