@@ -30,26 +30,26 @@ export function addData(newData) {
             console.log("Submit Okay")
         }
     });
-};
+};  
 
 export function fetchData() {
-        var listOfData = []
-        databaseRef.on('value', function(snapshot) {
-            snapshot.forEach(function(childSnapshot) {
-                console.log(childSnapshot.key);
-                listOfData.push({
-                    "name": String(childSnapshot.val()["name"]),
-                    "number": String(childSnapshot.val()["number"]),
-                    "age": String(childSnapshot.val()["age"]),
-                    "weight": String(childSnapshot.val()["weight"]),
-                    "calcium": String(childSnapshot.val()["calcium"]),
-                    "uce": String(childSnapshot.val()["uce"]),
-                    "bscl": String(childSnapshot.val()["bscl"])
-                })
-            });
-        })
-        console.log(listOfData);
-        return listOfData;
+    var listOfData = []
+    databaseRef.on('value', function(snapshot) {
+        snapshot.forEach(function(childSnapshot) {
+            console.log(childSnapshot.key);
+            listOfData.push({
+                "name": String(childSnapshot.val()["name"]),
+                "number": String(childSnapshot.val()["number"]),
+                "age": String(childSnapshot.val()["age"]),
+                "weight": String(childSnapshot.val()["weight"]),
+                "calcium": String(childSnapshot.val()["calcium"]),
+                "uce": String(childSnapshot.val()["uce"]),
+                "bscl": String(childSnapshot.val()["bscl"])
+            })
+        });
+    })
+    console.log(listOfData);
+    return listOfData;
 }
 
 

@@ -39,14 +39,12 @@ function sendTextWithData(name, number, uce, bscl, calcium, age, weight) {
     }
 
     message += "If you have any further questions, please dont hesistake to contace chees.life clinical trials."
-    console.log(message);
     //sendText(message, number)
 
 }
 
 function sendText(textData, destination) {
     let number = "+61" + destination.slice(1);
-    console.log(number);
     var accountSid = 'ACc9ccc6c41bd632675a838b63813bf41c'; // Your Account SID from www.twilio.com/console
     var authToken = 'b0ba39f79c9d113aa9ece16c409c7b2a';   // Your Auth Token from www.twilio.com/console
 
@@ -83,6 +81,7 @@ class DoctorForm extends React.Component {
            students: this.props.data
        }
     }
+
     
     renderTableData() {
         return this.state.students.map((student, index) => {
@@ -114,7 +113,7 @@ class DoctorForm extends React.Component {
                    <td>{age}</td>
                    <td>{calcium}</td>
                    <td>
-                   <button onClick={() => this.props.data.uce = promptdatauce(name)}>Add uce</button>
+                   <button onClick={() => {promptdatauce(name)}}>Add uce</button>
                    </td>
                    <td>{bscl}</td>
                    <td></td>

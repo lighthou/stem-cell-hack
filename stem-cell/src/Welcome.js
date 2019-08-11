@@ -42,8 +42,6 @@ class Welcome extends React.Component {
           <div className="background">
         <div className="App">
           <header className="App-header">
-            <h1>Cheese Life</h1>
-            <h5>Calcium Monitoring System</h5>
             <p className="padded" >Are you a doctor or a patient?</p>
             <div className="imageInput" >
             <span>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Doctor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span className="patient">Patient &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
