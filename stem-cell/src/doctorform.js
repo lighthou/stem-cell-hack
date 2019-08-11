@@ -1,10 +1,64 @@
 import React from 'react';
 import './App.css';
-import { fetchData, getData, populateData, data} from './actions';
-
 
 function promptdata(text) {
     prompt("What was the patient's levels?", 0);
+}
+
+function sendText(textData, destination) {
+    var accountSid = 'ACc9ccc6c41bd632675a838b63813bf41c'; // Your Account SID from www.twilio.com/console
+    var authToken = 'b0ba39f79c9d113aa9ece16c409c7b2a';   // Your Auth Token from www.twilio.com/console
+
+    var details = {
+        'Body': textData,
+        'From': '+61439737983',
+        'To': destination
+      };
+
+    var formBody = [];
+    for (var property in details) {
+    var encodedKey = encodeURIComponent(property);
+    var encodedValue = encodeURIComponent(details[property]);
+    formBody.push(encodedKey + "=" + encodedValue);
+    }
+    formBody = formBody.join("&");
+
+        
+    let theHeaders = new Headers();
+    theHeaders.append('Authorization', 'Basic ' + btoa(accountSid + ":" + authToken));
+    theHeaders.append('Content-Type', 'application/x-www-form-urlencoded;charset=UTF-8')
+
+    fetch('https://api.twilio.com/2010-04-01/Accounts/ACc9ccc6c41bd632675a838b63813bf41c/Messages.json', {
+    method: 'POST',
+    headers: theHeaders,
+    body: formBody
+    })
+
+
+    // const { exec } = require('child_process');
+    // exec('node new.js', (err, stdout, stderr) => {
+    //     if (err) {
+    //         // node couldn't execute the command
+    //         return;
+    //     }
+
+    //     // the *entire* stdout and stderr (buffered)
+    //     console.log(`stdout: ${stdout}`);
+    //     console.log(`stderr: ${stderr}`);
+    // });
+
+//     const accountSid = process.env.TWILIO_ACCOUNT_SID;
+//     const authToken = process.env.TWILIO_AUTH_TOKEN;
+//     const client = require('twilio')(accountSid, authToken);
+
+
+//     client.messages
+//     .create({
+//         body: textData,
+//         from: '+61439737983',
+//         to: destination
+//     })
+//   .then(message => console.log(message.sid));
 }
 
 class DoctorForm extends React.Component {
@@ -13,6 +67,8 @@ class DoctorForm extends React.Component {
        this.state = {
            students: this.props.data
        }
+
+       sendText("Hello Ryan", "+61411282134");
     }
     
     renderTableData() {

@@ -3,10 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "express": "^4.17.1",
+    "express-pino-logger": "^4.0.0",
     "firebase": "^6.3.5",
+    "fs": "0.0.1-security",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.0"
+    "react-scripts": "3.1.0",
+    "twilio": "^3.33.3"
   },
   "scripts": {
     "start": "PORT=80 react-scripts start",

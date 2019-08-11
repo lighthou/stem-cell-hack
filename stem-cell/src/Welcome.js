@@ -6,7 +6,6 @@ import NameForm from './App.js'
 import ReactDOM from 'react-dom';
 import DoctorForm from './doctorform'
 import { populateData } from './actions';
-import { isLVal } from '@babel/types';
 
 class Welcome extends React.Component {
     constructor(props) {
@@ -44,12 +43,12 @@ class Welcome extends React.Component {
           <header className="App-header">
             <p className="padded" >Are you a doctor or a patient?</p>
             <div className="imageInput">
-            <span classname="doctor">  &nbsp;&nbsp;&nbsp;Doctor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span className="patient">Patient &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span>
+            <span>  &nbsp;&nbsp;&nbsp;Doctor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span className="patient">Patient &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span>
             </div>
             <div className="imageInput">
             <input className='imageinput' type="image" src={doctor} height='270' width='300' onClick={() => {
                 var password = prompt("Enter your medical unique identifier");
-                if (password == "1234") {
+                if (password === "1234") {
                     ReactDOM.render(<DoctorForm data={this.data}/>, document.getElementById('root'));
                 }
                 }}/>
