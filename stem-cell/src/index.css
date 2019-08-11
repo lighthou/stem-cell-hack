@@ -12,6 +12,14 @@ code {
     monospace;
 }
 
+#imageinput {
+  display: inline;
+}
+
+.doctor {
+  padding: 50px;
+}
+
 .padded {
   padding: 20px
 }
@@ -31,7 +39,7 @@ input[type=number]{
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
   border: 3px solid #ddd;
-  width: 100%;
+  width: 50%;
 }
 
 #students td, #students th {

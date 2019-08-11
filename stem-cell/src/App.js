@@ -37,11 +37,13 @@ class NameForm extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
+        <p className="padded" >Please enter your details below.</p>
+
         <div className="padded" align="right"> 
-        <form id="submitform" onSubmit={this.handleSubmit}>
-        <label className="inputlabel">Weight:  <input required type="number" name="name" value={this.state.value1} onChange={this.handleChangeValue1}/></label><br></br>
-        <label className="inputlabel">Daily Calcium:  <input required type="number" name="name" value={this.state.value2} onChange={this.handleChangeValue2}/></label><br></br>
-        <label className="inputlabel">Age:  <input required type="number" name="name" value={this.state.value3} onChange={this.handleChangeValue3}/></label><br></br>
+        <form id="submitform" onSubmit={this.handleSubmit}>  
+        <label className="inputlabel">Weight (in Kg):  <input required type="number" min="20" max="150" name="name" value={this.state.value1} onChange={this.handleChangeValue1}/></label><br></br>
+        <label className="inputlabel">Daily Calcium (in Mg):  <input required type="number" name="name" min="0" max="2000" value={this.state.value2} onChange={this.handleChangeValue2}/></label><br></br>
+        <label className="inputlabel">Age (in Years):  <input required type="number" name="name" min="1" max="110" value={this.state.value3} onChange={this.handleChangeValue3}/></label><br></br>
         <input type="submit" name="submit" value="Submit Stem Cell Details" align="center"/>
         </form>
         </div>

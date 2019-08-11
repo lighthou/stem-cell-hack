@@ -1,6 +1,6 @@
 import {databaseRef} from '../firebase'
 
-export var data = [{"value1":"hello", "value2":"heyo", "value3":"wow"}];
+export var data = [];
 
 export function populateData() {
     data = fetchData();
@@ -19,7 +19,7 @@ export function addData(newData) {
 };
 
 export function fetchData() {
-        var listOfData = [{"value1": "hi","value2":"k","value3":"nn"}]
+        var listOfData = []
         databaseRef.on('value', function(snapshot) {
             snapshot.forEach(function(childSnapshot) {
                 //console.log(listOfData);
@@ -31,7 +31,6 @@ export function fetchData() {
             });
         })
         console.log(listOfData);
-        listOfData = [{"value1":"hello", "value2":"heyo", "value3":"wow"}];
         return listOfData;
 }
 
