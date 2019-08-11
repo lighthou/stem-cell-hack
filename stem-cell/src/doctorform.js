@@ -68,7 +68,7 @@ class DoctorForm extends React.Component {
            students: this.props.data
        }
 
-       sendText("Hello Ryan", "+61411282134");
+       //sendText("Hello Ryan", "+61411282134");
     }
     
     renderTableData() {
