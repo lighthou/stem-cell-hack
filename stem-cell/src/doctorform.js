@@ -72,7 +72,7 @@ class DoctorForm extends React.Component {
      render() {
         return (
            <div>
-              <h1 id='title'>Patient Calcium Data</h1>
+              <h1 id='title' className="title">Patient Calcium Data</h1>
               <table id='students' align="center">
                  <tbody>
                     <tr>{this.renderTableHeader()}</tr>

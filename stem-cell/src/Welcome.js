@@ -39,11 +39,12 @@ class Welcome extends React.Component {
   
     render() {
       return (
+          <div className="background">
         <div className="App">
           <header className="App-header">
             <p className="padded" >Are you a doctor or a patient?</p>
-            <div className="imageInput">
-            <span>  &nbsp;&nbsp;&nbsp;Doctor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span className="patient">Patient &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;</span>
+            <div className="imageInput" >
+            <span>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Doctor &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span> <span className="patient">Patient &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
             </div>
             <div className="imageInput">
             <input className='imageinput' type="image" src={doctor} height='270' width='300' onClick={() => {
@@ -55,6 +56,7 @@ class Welcome extends React.Component {
             <input className="imageinput" type="image" src={caillou} height='250' width='310' onClick={() => {ReactDOM.render(<NameForm />, document.getElementById('root'));}}/>
             </div>
           </header>
+        </div>
         </div>
       );
     }

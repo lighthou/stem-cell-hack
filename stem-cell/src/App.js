@@ -48,7 +48,7 @@ class NameForm extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-        <p >Please enter your details below.</p>
+        <p ><b>Please enter your details below.</b></p>
         <div className="padded" align="right"> 
         <form id="submitform" onSubmit={this.handleSubmit}>  
         <label className="inputlabel">First Name:  <input required type="text" name="name" value={this.state.name} onChange={this.handleChangeName}/></label><br></br>
@@ -59,7 +59,8 @@ class NameForm extends React.Component {
         <input type="submit" name="submit" value="Submit Stem Cell Details" align="center"/>
         </form>
         </div>
-        
+        <p><b>You will receive a text about any dietary modifications that should be made based on calcium intake.</b></p>
+
         </header>
       </div>
     );

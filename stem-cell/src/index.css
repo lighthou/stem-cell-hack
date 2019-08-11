@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+   background-image: url('./background.jpg');
 }
 
 code {
@@ -16,8 +17,12 @@ code {
   display: inline;
 }
 
-.doctor {
-  padding: 50px;
+.background {
+  background-image: url('./background.jpg')
+}
+
+.title {
+  color:white;
 }
 
 .padded {
@@ -26,8 +31,13 @@ code {
 
 input[type=number]{
   width: 193px;
-  height: 29px;
+  height: 40px;
 } 
+
+input[type=text] {
+  width: 193px;
+  height: 40px;
+}
 
 #title {
   text-align: center;
