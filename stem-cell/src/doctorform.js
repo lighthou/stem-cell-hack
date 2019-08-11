@@ -33,32 +33,6 @@ function sendText(textData, destination) {
     headers: theHeaders,
     body: formBody
     })
-
-
-    // const { exec } = require('child_process');
-    // exec('node new.js', (err, stdout, stderr) => {
-    //     if (err) {
-    //         // node couldn't execute the command
-    //         return;
-    //     }
-
-    //     // the *entire* stdout and stderr (buffered)
-    //     console.log(`stdout: ${stdout}`);
-    //     console.log(`stderr: ${stderr}`);
-    // });
-
-//     const accountSid = process.env.TWILIO_ACCOUNT_SID;
-//     const authToken = process.env.TWILIO_AUTH_TOKEN;
-//     const client = require('twilio')(accountSid, authToken);
-
-
-//     client.messages
-//     .create({
-//         body: textData,
-//         from: '+61439737983',
-//         to: destination
-//     })
-//   .then(message => console.log(message.sid));
 }
 
 class DoctorForm extends React.Component {
@@ -73,12 +47,14 @@ class DoctorForm extends React.Component {
     
     renderTableData() {
         return this.state.students.map((student, index) => {
-           const { value1, value2, value3, UCE, BSCL } = student //destructuring
+           const { name, number, weight, age, calcium, UCE, BSCL } = student //destructuring
            return (
-              <tr key={value1}>
-                 <td>{value1}</td>
-                 <td>{value2}</td>
-                 <td>{value3}</td>
+              <tr key={name}>
+                 <td>{name}</td>
+                 <td>{number}</td>
+                 <td>{weight}</td>
+                 <td>{age}</td>
+                 <td>{calcium}</td>
                  <td>{UCE}<button onClick={promptdata}>Add UCE</button></td>
                  <td>{BSCL}<button  onClick={promptdata}>Add BSCL</button></td>
               </tr>

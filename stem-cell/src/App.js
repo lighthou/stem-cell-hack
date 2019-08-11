@@ -6,29 +6,39 @@ import { addData } from './actions';
 class NameForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {value1: '', value2: '', value3:''};
+    this.state = {name: '', number: '', weight: '', calcium: '', age:''};
 
-    this.handleChangeValue1 = this.handleChangeValue1.bind(this);
-    this.handleChangeValue2 = this.handleChangeValue2.bind(this);
-    this.handleChangeValue3 = this.handleChangeValue3.bind(this);
+    this.handleChangeName = this.handleChangeName.bind(this)
+    this.handleChangeNumber = this.handleChangeNumber.bind(this);
+    this.handleChangeWeight = this.handleChangeWeight.bind(this);
+    this.handleChangeCalcium = this.handleChangeCalcium.bind(this);
+    this.handleChangeAge = this.handleChangeAge.bind(this);
 
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleChangeValue1(event) {
-    this.setState({value1: event.target.value});
+  handleChangeName(event) {
+    this.setState({name: event.target.value})
   }
 
-  handleChangeValue2(event) {
-    this.setState({value2: event.target.value});
+  handleChangeNumber(event) {
+    this.setState({number: event.target.value});
   }
 
-  handleChangeValue3(event) {
-    this.setState({value3: event.target.value});
+  handleChangeWeight(event) {
+    this.setState({weight: event.target.value});
+  }
+
+  handleChangeCalcium(event) {
+    this.setState({calcium: event.target.value});
+  }
+
+  handleChangeAge(event) {
+    this.setState({age: event.target.value});
   }
 
   handleSubmit(event) {
-    alert('Your results have been submitted!: ' + this.state.value1 + " " + this.state.value2 + " " + this.state.value3);
+    alert('Your results have been submitted!');
     event.preventDefault();
     addData(this.state)
   }
@@ -37,13 +47,14 @@ class NameForm extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
-        <p className="padded" >Please enter your details below.</p>
-
+        <p >Please enter your details below.</p>
         <div className="padded" align="right"> 
         <form id="submitform" onSubmit={this.handleSubmit}>  
-        <label className="inputlabel">Weight (in Kg):  <input required type="number" min="20" max="150" name="name" value={this.state.value1} onChange={this.handleChangeValue1}/></label><br></br>
-        <label className="inputlabel">Daily Calcium (in Mg):  <input required type="number" name="name" min="0" max="2000" value={this.state.value2} onChange={this.handleChangeValue2}/></label><br></br>
-        <label className="inputlabel">Age (in Years):  <input required type="number" name="name" min="1" max="110" value={this.state.value3} onChange={this.handleChangeValue3}/></label><br></br>
+        <label className="inputlabel">First Name:  <input required type="text" name="name" value={this.state.name} onChange={this.handleChangeName}/></label><br></br>
+        <label className="inputlabel">Phone Number:  <input required type="text" name="name" value={this.state.number} onChange={this.handleChangeNumber}/></label><br></br>
+        <label className="inputlabel">Weight (in Kg):  <input required type="number" min="20" max="150" name="name" value={this.state.weight} onChange={this.handleChangeWeight}/></label><br></br>
+        <label className="inputlabel">Daily Calcium (in Mg):  <input required type="number" name="name" min="0" max="2000" value={this.state.calcium} onChange={this.handleChangeCalcium}/></label><br></br>
+        <label className="inputlabel">Age (in Years):  <input required type="number" name="name" min="1" max="110" value={this.state.age} onChange={this.handleChangeAge}/></label><br></br>
         <input type="submit" name="submit" value="Submit Stem Cell Details" align="center"/>
         </form>
         </div>

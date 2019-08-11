@@ -24,9 +24,12 @@ export function fetchData() {
             snapshot.forEach(function(childSnapshot) {
                 //console.log(listOfData);
                 listOfData.push({
-                    "value1": String(childSnapshot.val()["value1"]),
-                    "value2": String(childSnapshot.val()["value2"]),
-                    "value3": String(childSnapshot.val()["value3"])
+                    "name": String(childSnapshot.val()["name"]),
+                    "number": String(childSnapshot.val()["number"]),
+                    "age": String(childSnapshot.val()["age"]),
+                    "weight": String(childSnapshot.val()["weight"]),
+                    "calcium": String(childSnapshot.val()["calcium"]),
+
                 })
             });
         })
