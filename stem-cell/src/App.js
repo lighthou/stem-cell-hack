@@ -6,7 +6,7 @@ import { addData } from './actions';
 class NameForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {name: '', number: '', weight: '', calcium: '', age:''};
+    this.state = {name: '', number: '', weight: '', calcium: '', age:'', uce:'-', bscl: '-'};
 
     this.handleChangeName = this.handleChangeName.bind(this)
     this.handleChangeNumber = this.handleChangeNumber.bind(this);
@@ -40,6 +40,7 @@ class NameForm extends React.Component {
   handleSubmit(event) {
     alert('Your results have been submitted!');
     event.preventDefault();
+
     addData(this.state)
   }
 

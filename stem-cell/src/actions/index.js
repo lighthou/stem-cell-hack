@@ -29,7 +29,8 @@ export function fetchData() {
                     "age": String(childSnapshot.val()["age"]),
                     "weight": String(childSnapshot.val()["weight"]),
                     "calcium": String(childSnapshot.val()["calcium"]),
-
+                    "uce": String(childSnapshot.val()["uce"]),
+                    "bscl": String(childSnapshot.val()["bscl"])
                 })
             });
         })
