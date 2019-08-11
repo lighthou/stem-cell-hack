@@ -1,8 +1,15 @@
 import React from 'react';
 import './App.css';
+import {updateUCE, updateBSCL} from './actions';
 
-function promptdata(text) {
-    prompt("What was the patient's levels?", 0);
+function promptdataUCE(name) {
+    var text = prompt("What was the patient's levels?", 0);
+    updateUCE(name, text);
+}
+
+function promptdataBSCL(name) {
+   var text = prompt("What was the patient's levels?", 0);
+   updateBSCL(name, text);
 }
 
 function sendText(textData, destination) {
@@ -55,8 +62,8 @@ class DoctorForm extends React.Component {
                  <td>{weight}</td>
                  <td>{age}</td>
                  <td>{calcium}</td>
-                 <td>{UCE}<button onClick={promptdata}>Add UCE</button></td>
-                 <td>{BSCL}<button  onClick={promptdata}>Add BSCL</button></td>
+                 <td>{UCE}<button onClick={() => promptdataUCE(name)}>Add UCE</button></td>
+                 <td>{BSCL}<button  onClick={() => promptdataBSCL(name)}>Add BSCL</button></td>
               </tr>
            )
         })
