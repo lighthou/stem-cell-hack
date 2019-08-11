@@ -48,7 +48,6 @@ input[type=text] {
   text-align: center;
   font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
   border-collapse: collapse;
-  border: 3px solid #ddd;
   width: 50%;
 }
 
@@ -58,6 +57,9 @@ input[type=text] {
 }
 
 #students tr:nth-child(even){background-color: #f2f2f2;}
+
+#students tr:nth-child(odd){background-color: #f1f1f1;}
+
 
 #students tr:hover {background-color: #ddd;}
 
