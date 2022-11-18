@@ -9,7 +9,7 @@
     "fs": "0.0.1-security",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-scripts": "3.1.0",
+    "react-scripts": "5.0.1",
     "twilio": "^3.33.3"
   },
   "scripts": {
